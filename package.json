@@ -1,0 +1,8 @@
+{
+  "name": "express-webpack-mongodb",
+  "version": "1.0.0",
+  "description": "Praticando a criação de um template ",
+  "main": "server.js",
+  "author": "Fernando Santos Pereira <fernandomeca7@gmail.com>",
+  "license": "MIT"
+}
