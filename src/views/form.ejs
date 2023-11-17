@@ -1,0 +1,14 @@
+<%- include('./partials/head') %>
+
+<h1>Formulário</h1>
+
+<form action="">
+    <input type="hidden" name="_csurfValue" value=<%- csrfToken %>>
+
+    <label for="c-nome">Digite seu nome:</label>
+    <input type="text" id="c-nome" name="nome" required placeholder="nome">
+
+    <input type="submit" value="Enviar">
+</form>
+
+<%- include('./partials/footer') %>
