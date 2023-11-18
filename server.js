@@ -34,6 +34,12 @@ app.use(helmet());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src', 'views'));
 
+/* Habilitando o envio de dados pelo body da página */
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
+
 /* Criando uma pasta estática */
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -65,7 +71,7 @@ app.use(session({
     }),
     cookie: {
         maxAge: 60 * 60 * 24 * 7,
-        httpOnly: true 
+        httpOnly: true
     },
     crypto: {
         secret: 'squirrel'
@@ -75,6 +81,7 @@ app.use(session({
 /* Usando o connect-flash */
 app.use(flash());
 
+/* CSRF - Segurança */
 app.use(csurf());
 
 /* Usando os middlewares */

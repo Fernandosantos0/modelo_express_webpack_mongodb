@@ -6,7 +6,7 @@
     "author": "Fernando Santos Pereira <fernandomeca7@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "start": "nodemon ./server.js",
+        "start": "nodemon --ignore frontend --ignore public ./server.js",
         "dev": "webpack -w"
     },
     "dependencies": {
